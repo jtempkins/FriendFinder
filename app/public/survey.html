@@ -6,183 +6,351 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Friend Finder</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="Assets/CSS/style.css">
+
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script> -->
+
+    <!-- <link rel="stylesheet" href="Assets/CSS/style.css"> -->
 
 </head>
 
 <body>
 
-            <div class="survey">
-                <label for="city">Name</label>
-                <input class="form-control" id="cityDestination" placeholder="" type="text">
-                <label for="city">Link to Photo (Required)</label>
-                <input class="form-control" id="cityDestination" placeholder="" type="text">
+    <div class="survey">
+        <label for="name">Name</label>
+        <input class="form-control" id="name" placeholder="" type="text">
+        <label for="photo">Link to Photo (Required)</label>
+        <input class="form-control" id="photo" placeholder="" type="text">
 
-                <div class="dropdown">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
                     <h4>Question 1</h4>
                     <h5>The first question to be asked</h5>
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Select an Option
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">1 (Strongly Disagree)</a>
-                        <a class="dropdown-item" href="#">2</a>
-                        <a class="dropdown-item" href="#">3</a>
-                        <a class="dropdown-item" href="#">4</a>
-                        <a class="dropdown-item" href="#">5 (Strongly Agree)</a>
-                    </div>
-                    <div class="dropdown">
-                        <h4>Question 2</h4>
-                        <h5>The first question to be asked</h5>
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Select an Option
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">1 (Strongly Disagree)</a>
-                            <a class="dropdown-item" href="#">2</a>
-                            <a class="dropdown-item" href="#">3</a>
-                            <a class="dropdown-item" href="#">4</a>
-                            <a class="dropdown-item" href="#">5 (Strongly Agree)</a>
-                        </div>
-                        <div class="dropdown">
-                            <h4>Question 3</h4>
-                            <h5>The first question to be asked</h5>
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Select an Option
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">1 (Strongly Disagree)</a>
-                                <a class="dropdown-item" href="#">2</a>
-                                <a class="dropdown-item" href="#">3</a>
-                                <a class="dropdown-item" href="#">4</a>
-                                <a class="dropdown-item" href="#">5 (Strongly Agree)</a>
+
+                    <div class="input-group mb-3">
+
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="q1">Select</label>
+                            <div>
+                                <select class="custom-select" id="q1">
+                                    <option selected>Option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
                             </div>
-                            <div class="dropdown">
-                                <h4>Question 4</h4>
-                                <h5>The first question to be asked</h5>
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Select an Option
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">1 (Strongly Disagree)</a>
-                                    <a class="dropdown-item" href="#">2</a>
-                                    <a class="dropdown-item" href="#">3</a>
-                                    <a class="dropdown-item" href="#">4</a>
-                                    <a class="dropdown-item" href="#">5 (Strongly Agree)</a>
-                                </div>
-                                <div class="dropdown">
-                                    <h4>Question 5</h4>
-                                    <h5>The first question to be asked</h5>
-                                    <button class="btn btn-secondary dropdown-toggle" type="button"
-                                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="false">
-                                        Select an Option
-                                    </button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <a class="dropdown-item" href="#">1 (Strongly Disagree)</a>
-                                        <a class="dropdown-item" href="#">2</a>
-                                        <a class="dropdown-item" href="#">3</a>
-                                        <a class="dropdown-item" href="#">4</a>
-                                        <a class="dropdown-item" href="#">5 (Strongly Agree)</a>
-                                    </div>
-                                    <div class="dropdown">
-                                            <h4>Question 6</h4>
-                                            <h5>The first question to be asked</h5>
-                                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                Select an Option
-                                            </button>
-                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="#">1 (Strongly Disagree)</a>
-                                                <a class="dropdown-item" href="#">2</a>
-                                                <a class="dropdown-item" href="#">3</a>
-                                                <a class="dropdown-item" href="#">4</a>
-                                                <a class="dropdown-item" href="#">5 (Strongly Agree)</a>
-                                            </div>
-                                            <div class="dropdown">
-                                                <h4>Question 7</h4>
-                                                <h5>The first question to be asked</h5>
-                                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    Select an Option
-                                                </button>
-                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                    <a class="dropdown-item" href="#">1 (Strongly Disagree)</a>
-                                                    <a class="dropdown-item" href="#">2</a>
-                                                    <a class="dropdown-item" href="#">3</a>
-                                                    <a class="dropdown-item" href="#">4</a>
-                                                    <a class="dropdown-item" href="#">5 (Strongly Agree)</a>
-                                                </div>
-                                                <div class="dropdown">
-                                                    <h4>Question 8</h4>
-                                                    <h5>The first question to be asked</h5>
-                                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        Select an Option
-                                                    </button>
-                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                        <a class="dropdown-item" href="#">1 (Strongly Disagree)</a>
-                                                        <a class="dropdown-item" href="#">2</a>
-                                                        <a class="dropdown-item" href="#">3</a>
-                                                        <a class="dropdown-item" href="#">4</a>
-                                                        <a class="dropdown-item" href="#">5 (Strongly Agree)</a>
-                                                    </div>
-                                                    <div class="dropdown">
-                                                        <h4>Question 9</h4>
-                                                        <h5>The first question to be asked</h5>
-                                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            Select an Option
-                                                        </button>
-                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                            <a class="dropdown-item" href="#">1 (Strongly Disagree)</a>
-                                                            <a class="dropdown-item" href="#">2</a>
-                                                            <a class="dropdown-item" href="#">3</a>
-                                                            <a class="dropdown-item" href="#">4</a>
-                                                            <a class="dropdown-item" href="#">5 (Strongly Agree)</a>
-                                                        </div>
-                                                        <div class="dropdown">
-                                                            <h4>Question 10</h4>
-                                                            <h5>The first question to be asked</h5>
-                                                            <button class="btn btn-secondary dropdown-toggle" type="button"
-                                                                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                                                aria-expanded="false">
-                                                                Select an Option
-                                                            </button>
-                                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                                <a class="dropdown-item" href="#">1 (Strongly Disagree)</a>
-                                                                <a class="dropdown-item" href="#">2</a>
-                                                                <a class="dropdown-item" href="#">3</a>
-                                                                <a class="dropdown-item" href="#">4</a>
-                                                                <a class="dropdown-item" href="#">5 (Strongly Agree)</a>
-                                                            </div>
-                                                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-100"></div>
+
+            <div class="row">
+                <div class="col-sm">
+                    <h4>Question 2</h4>
+                    <h5>The first question to be asked</h5>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="q2">Select</label>
+                            <div>
+                                <select class="custom-select" id="q2">
+                                    <option selected>Option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-100"></div>
+
+            <div class="row">
+                <div class="col-sm">
+                    <h4>Question 3</h4>
+                    <h5>The first question to be asked</h5>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="q3">Select</label>
+                            <div>
+                                <select class="custom-select" id="q3">
+                                    <option selected>Option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100"></div>
+
+            <div class="row">
+                <div class="col-sm">
+                    <h4>Question 4</h4>
+                    <h5>The first question to be asked</h5>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="q4">Select</label>
+                            <div>
+                                <select class="custom-select" id="q4">
+                                    <option selected>Option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-100"></div>
+
+            <div class="row">
+                <div class="col-sm">
+                    <h4>Question 5</h4>
+                    <h5>The first question to be asked</h5>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="q5">Select</label>
+                            <div>
+                                <select class="custom-select" id="q5">
+                                    <option selected>Option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100"></div>
+
+            <div class="row">
+                <div class="col-sm">
+                    <h4>Question 6</h4>
+                    <h5>The first question to be asked</h5>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="q6">Select</label>
+                            <div>
+                                <select class="custom-select" id="q6">
+                                    <option selected>Option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-100"></div>
+
+            <div class="row">
+                <div class="col-sm">
+                    <h4>Question 7</h4>
+                    <h5>The first question to be asked</h5>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="q7">Select</label>
+                            <div>
+                                <select class="custom-select" id="q7">
+                                    <option selected>Option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-100"></div>
+
+            <div class="row">
+                <div class="col-sm">
+                    <h4>Question 8</h4>
+                    <h5>The first question to be asked</h5>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="q8">Select</label>
+                            <div>
+                                <select class="custom-select" id="q8">
+                                    <option selected>Option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-100"></div>
+
+            <div class="row">
+                <div class="col-sm">
+                    <h4>Question 9</h4>
+                    <h5>The first question to be asked</h5>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="q9">Select</label>
+                            <div>
+                                <select class="custom-select" id="q9">
+                                    <option selected>Option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100"></div>
+
+            <div class="row">
+                <div class="col-sm">
+                    <h4>Question 10</h4>
+                    <h5>The first question to be asked</h5>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="q10">Select</label>
+                            <div>
+                                <select class="custom-select" id="q10">
+                                    <option selected>Option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
+            <!-- //submit button// -->
+            <!-- <button class="submitBtn"> -->
+                <!-- <a class="btn btn-lg btn-primary" href="survey.html" type="submit">
+                    Submit</a> -->
+            
+                    <button class="btn btn-lg btn-primary" id="add-friend" type="submit">
+                        Submit</button>
+                
+            </div>
+        </div>
 
 
-                                <!-- Bootstrap CDN other services used -->
-                                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-                                    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-                                    crossorigin="anonymous"></script>
-                                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-                                    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-                                    crossorigin="anonymous"></script>
-                                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-                                    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-                                    crossorigin="anonymous"></script>
-                                <!-- End of Bootstrap CDN's ===================================== -->
-                                <script
-                                    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-                                <script type="text/javascript"
-                                    src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js"></script>
-                                <script src="Assets/JS/app.js"></script>
+        <script type="text/javascript">
+            $("#add-friend").on("click", function (event) {
+                event.preventDefault();
+                var friendless = {
+                    id: $("#name").val().trim(),
+                    img: $("#photo").val().trim(),
+                    scores: [
+                        $("#q1").val(),
+                        $("#q2").val(),
+                        $("#q3").val(),
+                        $("#q4").val(),
+                        $("#q5").val(),
+                        $("#q6").val(),
+                        $("#q7").val(),
+                        $("#q8").val(),
+                        $("#q9").val(),
+                        $("#q10").val()
+                    ]
+                };
+                console.log(friendless)
+
+                var bestMatch = {
+            name: "", photo: ""
+        }
+        .then (function (friends) {
+        for (var i = 0; i < friends.length; i++){
+            var currentFriend = friends[i];
+            var scoreDifference = 0;
+        for (var j = 0; j < currentFriend.scores.length; j++){
+                var currentScore = currentFriend.scores[j];
+                var newScore = friendless.scores;
+                    scoreDifference += Math.abs(parseInt(currentScore) - parseInt(newScore))            
+            }
+            if (scoreDifference < totalDifference) {
+				console.log('Closest match found = ' + diff);
+				console.log('Friend name = ' + friends[i].name);
+				console.log('Friend image = ' + friends[i].photo);
+
+				totalDifference = diff;
+				bestMatch = friends[i].name;
+            
+        }
+
+    }    
+
+                $.ajax("/api/friends", {
+                    type: "POST",
+                    data: friendless
+                }).then(
+                    function (bestMatch) {
+                        console.log("created new date client");
+                        // Reload the page to get the updated list
+                    $("#name").text(data.name);
+                    $("#photo").attr("src", data.photo);
+                    $("#friendModal").modal("toggle");
+                    },
+                );
+
+            });
+                // // $.post("/api/friends", friendless, function (data) {
+                // $.post("/api/friends", friendless, function (data) {
+
+                //     //https://getbootstrap.com/docs/4.3/components/modal/
+                // });
+
+    // </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js"></script>
+
 </body>
-
 </html>
